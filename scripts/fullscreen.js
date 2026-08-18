@@ -1,10 +1,10 @@
 function toggleFullscreen()
 {
-    let container = document.getElementById('game-container');
+    let target = document.querySelector('.fullscreen-target');
 
     if (!document.fullscreenElement)
     {
-        container.requestFullscreen()
+        target.requestFullscreen();
     }
     else
     {
