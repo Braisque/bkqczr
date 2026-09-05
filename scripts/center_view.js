@@ -1,3 +1,3 @@
-const x = (document.documentElement.scrollWidth - window.innerWidth) / 2;
-
-window.scrollTo(x, 0);
+const header = document.querySelector('h1');
+header.scrollIntoView({ block: 'start', inline: 'center' });
+window.scrollTo(window.scrollX, 0);

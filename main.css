@@ -20,25 +20,29 @@
 	--page-width: 800px;
 }
 
+
 /* General */
 body {
-	background-color: var(--bg-color);
-	width: var(--page-width);
-	margin: auto;
-	margin-top: var(--default-y-spacing);
-	margin-bottom: var(--default-y-spacing);
+    background-color: var(--bg-color);
+    width: 100%;
+    max-width: var(--page-width);
+    padding: 0 15px;
+    margin: var(--default-y-spacing) auto;
 }
 
 p, ul, h3 {
-	font-size: 16px;
-	font-family: "open_sans";
-	line-height: 26px;
-	text-align: justify;
-	color: var(--text-color);
-	width: var(--page-width);
-	text-indent: 60px;
-	margin-top: 6px;
-	margin-bottom: 6px;
+    font-size: 16px;
+    font-family: "open_sans";
+    line-height: 26px;
+    text-align: justify;
+    color: var(--text-color);
+    text-indent: 60px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 ul {
@@ -65,12 +69,19 @@ hr {
 	margin: 0px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 iframe {
-	border: none;
-	display: block;
-	position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    border: none;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--page-width);
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 h1, ul, iframe, .needs-space-after, .banner, button, #map {
@@ -81,10 +92,7 @@ h1, ul, iframe, .needs-space-after, .banner, button, #map {
 	font-size: 14px;
 	font-family: "open_sans";
 	color: var(--nav-color);
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px 20px;
 }
 
 .split-items {
@@ -92,27 +100,23 @@ h1, ul, iframe, .needs-space-after, .banner, button, #map {
 	justify-content: space-between;
 }
 
+
 /* Buttons and links */
 a, summary {
 	font-family: "open_sans";
 	text-decoration: none;
 	color: var(--link-color);
-	border: none;
 	cursor: pointer;
 }
 
 a:hover, summary:hover {
 	text-decoration: underline;
 	color: var(--highlight-color);
-	border: none;
 }
 
 details[open] summary~* {
 	background: var(--panel-color);
 	border-radius: 15px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 button {
@@ -141,6 +145,7 @@ button:hover {
 	margin-top: -15px;
 }
 
+
 /* Index */
 .index-card-container {
 	position: relative;
@@ -149,11 +154,13 @@ button:hover {
 }
 
 .h-v-centered {
-	pointer-events: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px;
 }
 
 .index-title {
@@ -161,15 +168,22 @@ button:hover {
 }
 
 .index-quote {
-	width: 780px;
-	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 10px auto;
+}
+
+.index-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .index-image:hover {
 	filter: brightness(30%);
 }
+
 
 /* Graphic works */
 .banner {
@@ -194,12 +208,12 @@ button:hover {
 	text-shadow: 2px 2px black;
 }
 
+
 /* Comics */
 #comics-wrapper {
     position: relative;
-    width: min-content;
-    margin-left: 50%; 
-    transform: translateX(-50%);
+    width: 100%;
+    margin: 0 auto;
 }
 
 #click-left, #click-right {
@@ -217,6 +231,7 @@ button:hover {
 #click-right {
     right: 0;
 }
+
 
 /* Short novels and texts pagination */
 .pageHidden {
@@ -245,6 +260,7 @@ button:hover {
 .active:hover {
 	text-decoration: none;
 }
+
 
 /* Bar */
 #bar {
