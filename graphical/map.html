@@ -5,24 +5,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Une carte d'un monde fictif dans lequel, entre autres, prennent place les évènements de «&nbsp;Mon coeur encordé&nbsp;», «&nbsp;Adieu Hinan&nbsp;», «&nbsp;Doll&nbsp;», «&nbsp;Launderley&nbsp;», «&nbsp;Penumbra&nbsp;» et la majeure partie des productions du recueil Bkqczr.">
+	<meta name="description" content="Une carte d'un monde fictif dans lequel, entre autres, prennent place les évènements de « Mon coeur encordé », « Adieu Hinan », « Doll », « Launderley », « Penumbra » et la majeure partie des productions du recueil Bkqczr.">
 	<title>Carte</title>
 	<link rel="stylesheet" href="../main.css">
 	<link rel="icon" href="/favicon.png">
 </head>
 
 
-<body style="margin: 0;">
-	<div style="width: 4096px; height: 4096px; background-image: url('../images/illustrations/map.webp'); padding-top: var(--default-y-spacing); box-sizing: border-box;">
-		<div style="width: var(--page-width); margin: auto;">
-			<nav id="main_menu_placeholder"></nav>
+<body style="margin: 0; width: 100%;">
+	<div style="width: 4096px; height: 4096px; background-image: url('../images/illustrations/map.webp');">
 
-			<h1>Carte</h1>
+		<div style="position: sticky; left: 0; width: 100vw; padding-top: var(--default-y-spacing);">
+			<div style="width: min(100% - (var(--default-x-spacing) * 2), var(--page-width)); margin: 0 auto;">
+				<nav id="main_menu_placeholder"></nav>
+				<h1>Carte</h1>
+			</div>
 		</div>
+
 	</div>
 
 	<script src="../scripts/main_menu.js"></script>
-	<script src="../scripts/center_view.js"></script>
+	<script src="../scripts/center_map_view.js"></script>
 </body>
 
 
