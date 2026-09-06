@@ -65,7 +65,7 @@ h3 {
 
 hr {
 	border: 1px solid var(--text-color);
-	margin: 0px;
+	margin: 0;
 }
 
 img {
@@ -147,44 +147,45 @@ button:hover {
 
 /* Index */
 .index-card-container {
-    display: grid;
-    align-items: center;
-    min-height: 200px;
-    overflow: hidden;
+	display: grid;
+	align-items: center;
+	min-height: 200px;
+	overflow: hidden;
 }
 
 .index-image, .h-v-centered {
-    grid-area: 1 / 1;
+	grid-area: 1 / 1;
 }
 
 .h-v-centered {
-    pointer-events: none;
-    width: 100%;
+	pointer-events: none;
+	width: 100%;
 	z-index: 1;
-    padding: 0 var(--default-x-spacing);;
+	padding: 0 var(--default-x-spacing);
+	;
 }
 
 .index-title {
-    margin: 0;
+	margin: 0;
 }
 
 .index-quote {
-    margin: 10px 0;
+	margin: 10px 0;
 }
 
 .index-image {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 	min-height: 0;
-    object-fit: cover;
+	object-fit: cover;
 }
 
 a:has(.index-card-container):hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover .index-image {
-    filter: brightness(30%);
+	filter: brightness(30%);
 }
 
 
@@ -267,11 +268,25 @@ a:hover .index-image {
 
 /* Bar */
 #bar {
-	text-align: right;
-	margin-bottom: 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 0 4px black) drop-shadow(0 0 4px black) drop-shadow(0 0 4px black) drop-shadow(0 0 4px black);
+}
+
+#bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;
+    text-decoration: none;
 }
 
 #bar a:hover {
-	position: relative;
-	bottom: -3px;
+    transform: translateY(3px);
+}
+
+#bar img {
+    height: 28px;
 }
