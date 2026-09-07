@@ -1,5 +1,7 @@
-window.onload = () =>
+window.addEventListener('load', () =>
 {
-    const scrollX = (4096 - window.innerWidth) / 2;
-    window.scrollTo(scrollX, 0);
-};
+    const wrapper = document.getElementById('map-wrapper');
+
+    const scrollX = (4096 - wrapper.clientWidth) / 2;
+    wrapper.scrollTo(scrollX, 0);
+});

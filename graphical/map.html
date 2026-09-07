@@ -12,20 +12,22 @@
 </head>
 
 
-<body style="margin: 0; min-width: 4096px;">
-	<div style="width: 4096px; height: 4096px; background-image: url('../images/illustrations/map.webp');">
+<body style="margin: 0; height: 100vh; overflow: hidden;">
+    <div id="map-wrapper" style="width: 100vw; height: 100vh; overflow: auto;">
+        <div style="width: 4096px; height: 4096px; background-image: url('../images/illustrations/map.webp');">
 
-		<div style="position: sticky; left: 0; width: 100vw; padding-top: var(--default-y-spacing);">
-			<div style="width: min(100% - (var(--default-x-spacing) * 2), var(--page-width)); margin: 0 auto;">
-				<nav id="main_menu_placeholder"></nav>
-				<h1>Carte</h1>
-			</div>
-		</div>
+            <div style="position: sticky; left: 0; width: 100vw; padding-top: var(--default-y-spacing);">
+                <div style="width: min(100% - (var(--default-x-spacing) * 2), var(--page-width)); margin: 0 auto;">
+                    <nav id="main_menu_placeholder"></nav>
+                    <h1>Carte</h1>
+                </div>
+            </div>
 
-	</div>
+        </div>
+    </div>
 
-	<script src="../scripts/main_menu.js"></script>
-	<script src="../scripts/center_map_view.js"></script>
+    <script src="../scripts/main_menu.js"></script>
+    <script src="../scripts/center_map_view.js"></script>
 </body>
 
 
